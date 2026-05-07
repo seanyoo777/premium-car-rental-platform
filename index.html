@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Premium Car Rental Platform</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:#000;
+color:#fff;
+}
+
+.hero{
+min-height:100vh;
+padding:60px 20px;
+background:
+radial-gradient(circle at top left, rgba(255,120,0,.25), transparent 30%),
+#000;
+}
+
+.container{
+max-width:1200px;
+margin:auto;
+}
+
+.title{
+font-size:70px;
+font-weight:900;
+line-height:1.1;
+}
+
+.orange{
+color:#ff6b00;
+}
+
+.desc{
+margin-top:25px;
+font-size:20px;
+color:#ccc;
+line-height:1.7;
+max-width:700px;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+margin-top:50px;
+}
+
+.card{
+background:#111;
+padding:30px;
+border-radius:25px;
+border:1px solid #222;
+}
+
+.card h2{
+font-size:35px;
+color:#ff6b00;
+margin-bottom:10px;
+}
+
+.compare{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:20px;
+margin-top:60px;
+}
+
+.box{
+padding:35px;
+border-radius:30px;
+}
+
+.dark{
+background:#111;
+}
+
+.orangebox{
+background:#ff6b00;
+color:#000;
+font-weight:bold;
+}
+
+.price{
+font-size:55px;
+font-weight:900;
+margin-top:15px;
+}
+
+.calc{
+margin-top:70px;
+background:#111;
+padding:40px;
+border-radius:30px;
+}
+
+input{
+width:100%;
+padding:18px;
+margin-top:15px;
+border-radius:15px;
+border:none;
+background:#000;
+color:#fff;
+font-size:22px;
+}
+
+.result{
+margin-top:30px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:15px;
+}
+
+.resultbox{
+background:#000;
+padding:20px;
+border-radius:20px;
+border:1px solid #222;
+}
+
+.resultbox h3{
+color:#999;
+font-size:14px;
+}
+
+.resultbox p{
+font-size:30px;
+font-weight:bold;
+margin-top:10px;
+}
+
+.orangeResult{
+background:#ff6b00;
+color:#000;
+}
+
+.apply{
+margin-top:70px;
+background:#111;
+padding:40px;
+border-radius:30px;
+}
+
+button{
+width:100%;
+padding:20px;
+margin-top:20px;
+background:#ff6b00;
+border:none;
+border-radius:18px;
+font-size:20px;
+font-weight:bold;
+cursor:pointer;
+}
+
+@media(max-width:768px){
+
+.title{
+font-size:45px;
+}
+
+.compare{
+grid-template-columns:1fr;
+}
+
+}
+</style>
+</head>
+
+<body>
+
+<section class="hero">
+
+<div class="container">
+
+<h1 class="title">
+잔존가치 없는<br>
+<span class="orange">프리미엄 차량 렌트</span>
+</h1>
+
+<p class="desc">
+보증금 30%만으로 차량 이용.<br>
+잔존가치 0원.<br>
+추가 인수금 없이 투명한 차량 렌트 시스템.
+</p>
+
+<div class="cards">
+
+<div class="card">
+<h2>30%</h2>
+<p>보증금</p>
+</div>
+
+<div class="card">
+<h2>0%</h2>
+<p>잔존가치</p>
+</div>
+
+<div class="card">
+<h2>36개월</h2>
+<p>원리금 균등</p>
+</div>
+
+<div class="card">
+<h2>반환 가능</h2>
+<p>원할 때 차량 반환</p>
+</div>
+
+</div>
+
+<div class="compare">
+
+<div class="box dark">
+
+<h2>기존 장기렌트</h2>
+
+<br>
+
+<p>차량가 전체 기준 렌트</p>
+<p>잔존가치 약 40%</p>
+<p>중도해지 위약금 발생 가능</p>
+
+<div class="price orange">
+약 ₩12,000,000
+</div>
+
+</div>
+
+<div class="box orangebox">
+
+<h2>우리 시스템</h2>
+
+<br>
+
+<p>차량가의 70%만 적용</p>
+<p>잔존가치 0%</p>
+<p>보험 직접 선택 가능</p>
+
+<div class="price">
+₩0
+</div>
+
+</div>
+
+</div>
+
+<div class="calc">
+
+<h2>월 납입금 계산</h2>
+
+<input id="carPrice" type="number" value="30000000"/>
+
+<div class="result">
+
+<div class="resultbox">
+<h3>보증금 30%</h3>
+<p id="deposit"></p>
+</div>
+
+<div class="resultbox">
+<h3>렌트 적용금액</h3>
+<p id="principal"></p>
+</div>
+
+<div class="resultbox">
+<h3>월 총 납입금</h3>
+<p id="monthly"></p>
+</div>
+
+<div class="resultbox orangeResult">
+<h3>잔존가치</h3>
+<p>₩0</p>
+</div>
+
+</div>
+
+</div>
+
+<div class="apply">
+
+<h2>고객 상담 신청</h2>
+
+<input placeholder="이름"/>
+<input placeholder="연락처"/>
+<input placeholder="희망 차량"/>
+
+<button>
+상담 신청하기
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+<script>
+
+function won(n){
+return "₩" + Math.round(n).toLocaleString();
+}
+
+function calc(){
+
+const carPrice = Number(document.getElementById("carPrice").value);
+
+const deposit = carPrice * 0.3;
+const principal = carPrice * 0.7;
+
+const annualRate = 0.075;
+const monthlyRate = annualRate / 12;
+const months = 36;
+
+const payment =
+principal *
+((monthlyRate * Math.pow(1 + monthlyRate, months)) /
+(Math.pow(1 + monthlyRate, months) - 1));
+
+const total = payment + 50000;
+
+document.getElementById("deposit").innerText = won(deposit);
+document.getElementById("principal").innerText = won(principal);
+document.getElementById("monthly").innerText = won(total);
+
+}
+
+calc();
+
+document.getElementById("carPrice").addEventListener("input", calc);
+
+</script>
+
+</body>
+</html>
