@@ -1,2 +1,16 @@
-# premium-car-rental-platform
-잔존가치 없는 프리미엄 차량 렌트 플랫폼
+{
+  "scripts": {
+    "dev": "vite --host 0.0.0.0",
+    "build": "vite build",
+    "preview": "vite preview --host 0.0.0.0"
+  },
+  "dependencies": {
+    "@vitejs/plugin-react": "latest",
+    "vite": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "framer-motion": "latest",
+    "lucide-react": "latest"
+  },
+  "devDependencies": {}
+}
