@@ -3,7 +3,8 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>잔존가치 없는 프리미엄 차량 렌트 플랫폼</title>
+<title>3년 후 내 차 만들기 프로젝트</title>
+
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:Arial,'Noto Sans KR',sans-serif}
 html{scroll-behavior:smooth}
@@ -31,17 +32,16 @@ li{padding:12px 0;color:#ddd;font-size:18px}
 .result{display:grid;grid-template-columns:repeat(3,1fr);gap:15px;margin-top:25px}
 .result div{background:#000;border:1px solid #333;border-radius:20px;padding:22px}
 .result strong{display:block;font-size:28px;margin-top:8px;color:#ff7a00}
-.timeline,.carlist{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:35px}
+.kpi,.timeline,.carlist{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:35px}
 .step,.car{background:#101010;border:1px solid #2a2a2a;border-radius:24px;padding:28px}
 .step span{font-size:40px;color:#ff7a00;font-weight:900}
 .car .emoji{font-size:52px;margin-bottom:18px}
 .notice{background:#0b2b12;border:1px solid #1f7a35;color:#c9ffd4;padding:18px;border-radius:18px;margin-top:22px}
-.full{width:100%}
 .footer{text-align:center;background:#000;border-top:1px solid #222}
 .small{font-size:14px;color:#888}
-.kpi{display:grid;grid-template-columns:repeat(3,1fr);gap:15px;margin-top:30px}
-.kpi div{background:#00000055;border:1px solid #ffffff25;border-radius:20px;padding:20px}
-.kpi strong{font-size:38px;color:#ff7a00}
+.kpi div{background:#00000055;border:1px solid #ffffff25;border-radius:20px;padding:24px}
+.kpi strong{font-size:44px;color:#ff7a00}
+.full{width:100%}
 @media(max-width:850px){
 .grid,.compare,.cards,.result,.timeline,.carlist,.kpi{grid-template-columns:1fr}
 h1{font-size:44px}
@@ -51,17 +51,18 @@ section{padding:55px 16px}
 }
 </style>
 </head>
+
 <body>
 
 <section class="hero">
 <div class="container grid">
 <div>
 <p class="orange">PREMIUM CAR RENTAL PLATFORM</p>
-<h1>잔존가치 없는<br><span class="orange">프리미엄 차량 렌트</span></h1>
+<h1>3년 후<br><span class="orange">내 차 만들기 프로젝트</span></h1>
 <p style="margin-top:25px">
-보증금 30% 이상 자유 설정.<br>
-보증금을 더 납부하면 월 렌트비는 더 낮아집니다.<br>
-신용조회 없이 보증금 기준으로 진행하는 새로운 차량 이용 시스템.
+렌트하고 끝나는 구조가 아닙니다.<br>
+3년 동안 내 차처럼 이용하고,<br>
+차량 매각 정산 구조까지 고려한 새로운 차량 이용 시스템.
 </p>
 <a href="#apply" class="btn">내 차량 견적 상담하기</a>
 </div>
@@ -72,7 +73,7 @@ section{padding:55px 16px}
 <p>월 납입금 / 관리비 포함</p>
 <div class="cards" style="grid-template-columns:repeat(3,1fr)">
 <div class="card"><h3>30%+</h3><p>보증금 자유 설정</p></div>
-<div class="card"><h3>0%</h3><p>잔존가치</p></div>
+<div class="card"><h3>32%</h3><p>실질 렌트비 구조</p></div>
 <div class="card"><h3>무제한</h3><p>키로수</p></div>
 </div>
 </div>
@@ -81,43 +82,12 @@ section{padding:55px 16px}
 
 <section>
 <div class="container">
-<h2>기존 장기렌트의 불편함을 줄였습니다</h2>
+<h2>핵심 혜택</h2>
 <div class="cards">
-<div class="card"><h3>보증금</h3><p>30% 이상 납부 가능. 보증금이 높을수록 월 렌트비 부담이 낮아집니다.</p></div>
-<div class="card"><h3>환급</h3><p>계약 종료 후 차량 매각 시 최대 70% 환급 가능 구조.</p></div>
-<div class="card"><h3>32%</h3><p>환급 구조 반영 시 실질 렌트비는 차량가격의 약 32% 수준으로 계산 가능.</p></div>
-<div class="card"><h3>신용조회 없음</h3><p>고객 신용조회 없이 오직 보증금 기준으로 적용됩니다.</p></div>
-</div>
-</div>
-</section>
-
-<section>
-<div class="container compare">
-<div class="box">
-<h2>기존 장기렌트</h2>
-<ul>
-<li>차량가 전체 기준 렌트</li>
-<li>잔존가치 약 40% 구조 가능</li>
-<li>중도해지 위약금 발생 가능</li>
-<li>계약 종료 후 추가 비용 발생 가능</li>
-</ul>
-<p style="margin-top:25px">3,000만원 차량 기준 잔존가치 예시</p>
-<div class="price">약 ₩12,000,000</div>
-</div>
-
-<div class="box good">
-<h2>우리 시스템</h2>
-<ul>
-<li>보증금 30% 이상 자유 설정</li>
-<li>보증금이 높을수록 월 렌트비 절감</li>
-<li>잔존가치 0원</li>
-<li>계약 종료 후 차량 매각 시 최대 70% 환급 가능</li>
-<li>계약 연장 시 월 5만원 관리비 납부</li>
-<li>무제한 키로수</li>
-<li>고객 신용조회 없음</li>
-</ul>
-<div class="price" style="color:#000">₩0</div>
-<p>계약 종료 후 추가 인수금</p>
+<div class="card"><h3>내 차 만들기</h3><p>3년 동안 내 차처럼 이용하고 계약 종료 후 정산 구조까지 고려합니다.</p></div>
+<div class="card"><h3>신용조회 없음</h3><p>고객 신용정보 조회 없이 오로지 보증금 기준으로 적용됩니다.</p></div>
+<div class="card"><h3>실질 32%</h3><p>환급 구조 반영 시 실질 렌트비는 차량가격의 약 32% 수준으로 계산 가능합니다.</p></div>
+<div class="card"><h3>무제한 키로수</h3><p>키로수 제한 없이 내 차처럼 자유롭게 이용 가능합니다.</p></div>
 </div>
 </div>
 </section>
@@ -130,6 +100,39 @@ section{padding:55px 16px}
 <div><strong>70%</strong><p>계약 종료 후 차량 매각 시 최대 환급 가능 구조</p></div>
 <div><strong>32%</strong><p>실질 렌트비 체감 구조</p></div>
 <div><strong>0%</strong><p>신용조회 없이 보증금 기준 진행</p></div>
+</div>
+</div>
+</section>
+
+<section>
+<div class="container compare">
+<div class="box">
+<h2>기존 장기렌트</h2>
+<ul>
+<li>차량가 전체 기준 렌트</li>
+<li>잔존가치 약 40% 구조 가능</li>
+<li>중도해지 위약금 발생 가능</li>
+<li>키로수 제한 가능</li>
+<li>계약 종료 후 추가 비용 발생 가능</li>
+</ul>
+<p style="margin-top:25px">3,000만원 차량 기준 잔존가치 예시</p>
+<div class="price">약 ₩12,000,000</div>
+</div>
+
+<div class="box good">
+<h2>우리 시스템</h2>
+<ul>
+<li>3년 후 내 차 만들기 구조</li>
+<li>보증금 30% 이상 자유 설정</li>
+<li>보증금이 높을수록 월 렌트비 절감</li>
+<li>실질 렌트비 차량가격의 약 32%</li>
+<li>계약 종료 후 차량 매각 시 최대 70% 환급 가능</li>
+<li>무제한 키로수</li>
+<li>고객 신용조회 없음</li>
+<li>오로지 보증금 기준 적용</li>
+</ul>
+<div class="price" style="color:#000">확실히 다릅니다</div>
+<p>타 렌트사와 비교해보세요</p>
 </div>
 </div>
 </section>
@@ -150,7 +153,7 @@ section{padding:55px 16px}
 </div>
 
 <div class="notice">
-계산 기준: 연 7.5%, 36개월 원리금균등, 관리비 월 5만원 기준입니다. 실제 조건은 차량 및 계약 조건에 따라 달라질 수 있습니다.
+보증금 30% 이상 납부 시 월 렌트비는 더 낮아질 수 있습니다. 계산 기준은 연 7.5%, 36개월 원리금균등, 관리비 월 5만원 기준입니다.
 </div>
 </div>
 </section>
@@ -191,9 +194,10 @@ section{padding:55px 16px}
 <div class="price" id="appMonthly">₩703,231</div>
 <p>월 납입금</p>
 <ul>
+<li>3년 후 내 차 만들기 구조</li>
 <li>보증금 자동 계산</li>
-<li>잔존가치 0원</li>
 <li>최대 70% 환급 구조</li>
+<li>실질 렌트비 약 32%</li>
 <li>무제한 키로수</li>
 <li>신용조회 없음</li>
 </ul>
@@ -220,8 +224,8 @@ section{padding:55px 16px}
 
 <section class="footer">
 <div class="container">
-<h2>렌트료보다 중요한 건<br><span class="orange">계약 종료 후 얼마를 돌려받을 수 있는가</span></h2>
-<p>보증금 30% 이상 · 최대 70% 환급 구조 · 무제한 키로수 · 신용조회 없음</p>
+<h2>타 렌트사와 비교해보세요.<br><span class="orange">확실히 다릅니다.</span></h2>
+<p>3년 후 내 차 만들기 · 신용조회 없음 · 실질 렌트비 약 32% · 무제한 키로수</p>
 </div>
 </section>
 
