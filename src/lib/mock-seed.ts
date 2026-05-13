@@ -1,0 +1,133 @@
+import type { DemoState } from "./types";
+import { DEFAULT_COMPANY, DEFAULT_DEMO_BRANCH_ID } from "./constants";
+
+export const initialDemoState: DemoState = {
+  company: { ...DEFAULT_COMPANY },
+  vehicles: [
+    {
+      id: "v-genesis-gv80",
+      name: "제네시스 GV80 (데모)",
+      brand: "제네시스",
+      model: "GV80",
+      priceWon: 85_000_000,
+      depositPercent: 20,
+      monthlyPaymentWon: 1_250_000,
+      contractMonths: 36,
+      imageUrl:
+        "https://images.unsplash.com/photo-1617788138017-80ad40651399?auto=format&fit=crop&w=900&q=80",
+      status: "contracted",
+      branchId: DEFAULT_DEMO_BRANCH_ID,
+    },
+    {
+      id: "v-bmw-5",
+      name: "BMW 5시리즈 (데모)",
+      brand: "BMW",
+      model: "520i",
+      priceWon: 62_000_000,
+      depositPercent: 18,
+      monthlyPaymentWon: 980_000,
+      contractMonths: 36,
+      imageUrl:
+        "https://images.unsplash.com/photo-1555215695-3004980ad54e?auto=format&fit=crop&w=900&q=80",
+      status: "available",
+      branchId: DEFAULT_DEMO_BRANCH_ID,
+    },
+    {
+      id: "v-ev6",
+      name: "기아 EV6 (데모)",
+      brand: "기아",
+      model: "EV6",
+      priceWon: 55_000_000,
+      depositPercent: 15,
+      monthlyPaymentWon: 890_000,
+      contractMonths: 36,
+      imageUrl:
+        "https://images.unsplash.com/photo-1593941707882-a5bba14938c7?auto=format&fit=crop&w=900&q=80",
+      status: "reserved",
+      branchId: DEFAULT_DEMO_BRANCH_ID,
+    },
+  ],
+  customers: [
+    {
+      id: "c-1",
+      name: "데모 법인",
+      phone: "010-0000-0001",
+      region: "김해",
+      customerType: "corporate",
+      preferredVehicleId: "v-genesis-gv80",
+      createdAt: new Date().toISOString(),
+      branchId: DEFAULT_DEMO_BRANCH_ID,
+    },
+  ],
+  applications: [
+    {
+      id: "a-1",
+      name: "김해 테스트",
+      phone: "010-1234-5678",
+      region: "김해",
+      customerType: "individual",
+      preferredVehicleId: "v-bmw-5",
+      message: "법인 명의로 상담 받고 싶습니다.",
+      privacyAgreed: true,
+      status: "new",
+      memo: "",
+      statusLog: [
+        {
+          at: new Date().toISOString(),
+          from: null,
+          to: "new",
+          by: "system",
+        },
+      ],
+      createdAt: new Date().toISOString(),
+      mockRef: "GR-2026-00001",
+      branchId: DEFAULT_DEMO_BRANCH_ID,
+    },
+  ],
+  contracts: [
+    {
+      id: "ct-1",
+      customerId: "c-1",
+      vehicleId: "v-genesis-gv80",
+      startDate: "2026-01-01",
+      endDate: "2028-12-31",
+      monthlyDueDay: 5,
+      monthlyPaymentWon: 1_250_000,
+      depositWon: 17_000_000,
+      status: "active",
+      memo: "3년 타면 인수 가능 조건(데모)",
+      autodebitStatus: "active",
+      branchId: DEFAULT_DEMO_BRANCH_ID,
+    },
+  ],
+  payments: [
+    {
+      id: "p-1",
+      contractId: "ct-1",
+      dueDate: "2026-05-10",
+      amountWon: 1_250_000,
+      status: "scheduled",
+      branchId: DEFAULT_DEMO_BRANCH_ID,
+    },
+    {
+      id: "p-2",
+      contractId: "ct-1",
+      dueDate: "2026-05-05",
+      amountWon: 1_250_000,
+      status: "paid",
+      branchId: DEFAULT_DEMO_BRANCH_ID,
+    },
+  ],
+  auditLogs: [
+    {
+      id: "al-1",
+      at: new Date().toISOString(),
+      actor: "admin",
+      action: "seed",
+      entityType: "system",
+      entityId: "init",
+      detail: "데모 데이터 로드",
+    },
+  ],
+  notificationLogs: [],
+};
